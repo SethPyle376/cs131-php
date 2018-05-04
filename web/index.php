@@ -19,7 +19,7 @@
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 		</ul>
 
-		<div>
+		<div style="margin-left:25%; padding: 1px 16px; height:1000px;">
 			<p>Hello</p>
 		</div>
 
