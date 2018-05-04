@@ -19,5 +19,9 @@
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 		</ul>
 
+		<div>
+			<p>Hello</p>
+		</div>
+
 	</body>
 </html>
