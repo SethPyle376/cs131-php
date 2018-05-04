@@ -4,9 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<ul id="navbar">
-			<li id="navbarItem"><a id="navbarLink" href="#home">Jason Pyle's Assignment Page</a></li>
-		</ul>
+		<?php include 'navbar.php'; ?>
 
 		<ul id="sidebar">
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
