@@ -20,7 +20,7 @@
 		</ul>
 
 		<div style="margin-left:25%; padding: 1px 16px; height:1000px;">
-			<p>Hello</p>
+			<p>Assignments will be coming soon. Links will be in the sidebar.</p>
 		</div>
 
 	</body>
