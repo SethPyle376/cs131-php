@@ -13,7 +13,8 @@
 
 		<div style="margin-left:25%; padding: 1px 16px; height:1000px;">
 			<img src="picture.jpg" style="width:480px; height: 320px;">
-			<p id="outline">Hi my name is Jason Pyle</p>
+			<p id="outline">Hi my name is Jason Pyle. I'm studying computer science here at BYUI.</p>
+			<a href="https://github.com/SethPyle376">My Github</a>
 		</div>
 
 	</body>

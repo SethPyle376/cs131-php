@@ -3,7 +3,7 @@
 		<title>Jason Pyle's Homepage</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body bgcolor="#b7b2aa">
 		<?php include 'navbar.php'; ?>
 
 		<ul id="sidebar">
