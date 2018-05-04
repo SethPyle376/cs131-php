@@ -3,7 +3,7 @@
 		<title>Jason Pyle's Homepage</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body style:"background-color: #f2e1c9">
 		<ul id="navbar">
 			<li id="navbarItem"><a id="navbarLink" href="#home">Jason Pyle's Homepage</a></li>
 		</ul>
