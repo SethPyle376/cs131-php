@@ -21,3 +21,31 @@
 #navbarLink:hover {
 	background-color: #111;
 }
+
+#sidebar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 25%;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+#sidebarLink {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+#sidebarLink.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+#sidebarLink:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
