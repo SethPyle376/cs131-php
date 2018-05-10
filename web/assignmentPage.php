@@ -7,7 +7,7 @@
 		<?php include 'navbar.php'; ?>
 
 		<ul id="sidebar">
-			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
+			<li id="sidebarItem"><a id="sidebarLink" href="team03/team03.php">Team03 Activity</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
