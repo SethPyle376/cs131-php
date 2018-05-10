@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <form action="send.php" method="post">
+            Name: <input type="text" name="name"><br>
+            E-Mail: <input type="text" name="email"><br>
+            Major:<br>
+            <input type="radio" name="major" value="Computer Science"/>Computer Science<br>
+            <input type="radio" name="major" value="Web Design and Development"/>Web Design and Development<br> 
+            <input type="radio" name="major" value="Computer Information Technology"/>Computer Information Technology<br> 
+            <input type="radio" name="major" value="Computer Engineering"/>Computer Engineering<br>
+            Comments:<br>
+            <textarea name="comments" rows="4" cols="40"></textarea>
+            <br><br>
+            Continents You've Visited:<br>
+            North America <input type="checkbox" name="continents[]" value="North America"><br>
+            South America <input type="checkbox" name="continents[]" value="South America"><br>
+            Europe <input type="checkbox" name="continents[]" value="Europe"><br>
+            Asia <input type="checkbox" name="continents[]" value="Asia"><br>
+            Africa <input type="checkbox" name="continents[]" value="Africa"><br>
+            Antarctica <input type="checkbox" name="continents[]" value="Anarctica"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
