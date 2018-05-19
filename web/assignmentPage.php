@@ -8,7 +8,7 @@
 
 		<ul id="sidebar">
 			<li id="sidebarItem"><a id="sidebarLink" href="teach03/teach03.php">Team03 Activity</a></li>
-			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
+			<li id="sidebarItem"><a id="sidebarLink" href="prove03/mainpage.php">Prove 03 Shopping Cart</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
 			<li id="sidebarItem"><a id="sidebarLink" href="week2.php">Coming Soon</a></li>
