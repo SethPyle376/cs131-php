@@ -11,9 +11,6 @@
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	echo 'Database set up';
-
-
 	if (isset($_POST['id'])) {
 		$id = $_POST['id'];
 	}
@@ -21,8 +18,6 @@
 		echo 'ID NOT SET';
 		return;
 	}
-
-	echo 'ID SET';
 
 	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid='$id'") as $row) {
 		$tempUser = $row['creatorid'];
