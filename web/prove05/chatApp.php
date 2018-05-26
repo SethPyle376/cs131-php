@@ -12,6 +12,7 @@
 				xhttp.onreadystagechange = function() {
 					document.getElementById("messageContainer").innerHtml = this.responseText;
 				}
+				document.getElementById("messageContainer").innerHtml = "Pranked";
 				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xhttp.send("id=" + id);
 			}
