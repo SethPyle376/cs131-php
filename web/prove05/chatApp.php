@@ -15,8 +15,10 @@
 		<div id="messageContainer">
 			<div class = "card">
 				<div class="container">
-					<b>User: Seth</b>
-					<p>This is the message</p>
+					<b>DIRECTIONS</b>
+					<p>Currently there exists 10 messages from 4 different people in the database. Please enter 1-10 in the above textbox,
+					   then click the button to have that message displayed. If you would like to see all the messages, please enter ALL into
+					   the textbox then click the button.</p>
 				</div>
 			</div>
 			<br>
