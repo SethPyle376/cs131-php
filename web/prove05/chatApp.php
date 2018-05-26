@@ -7,6 +7,7 @@
 		<script>
 
 			function getMessage(id) {
+				document.getElementById("messageContainer").innerHTML = "Pranked";
 				var xhttp = new XMLHttpRequest();
 				xhttp.open("POST", "getMessage.php", true);
 				xhttp.onreadystagechange = function() {
