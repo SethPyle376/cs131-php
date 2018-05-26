@@ -3,7 +3,7 @@ function getMessage(id) {
 	xhttp.open("POST", "getMessage.php", true);
 	xhttp.onreadystagechange = function() {
 		if (this.status = 200) {
-			document.getElementById("messageContainer").innerHtml = (document.getElementById("messageContainer").innerHtml + this.responseText);
+			document.getElementById("messageContainer").innerHtml = this.responseText;
 		}
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
