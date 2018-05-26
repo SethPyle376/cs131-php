@@ -11,6 +11,8 @@
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+	echo 'Database set up';
+
 
 	if (isset($_POST['id'])) {
 		$id = $_POST['id'];
@@ -20,7 +22,7 @@
 		return;
 	}
 
-	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE id='$id") as $row) {
+	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE id='$id'") as $row) {
 		$tempUser = $row['creatorid'];
 		foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
 			echo '<div class = "card"> 
