@@ -19,18 +19,37 @@
 		return;
 	}
 
-	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid='$id'") as $row) {
-		$tempUser = $row['creatorid'];
-		foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
-			echo '<div class = "card"> 
-					<div class = "container">
-						<b>User:' . $user['nickname'] . '</b>
-						<p>User Cookie: ' . $user['cookie'] . '</p>
-						<p>Message ID: '. $row['messageid'] . '</p>
-						<p>Message: ' . $row['content'] . '</p>
-						<p>Creation Timestamp ' . $row['ts'] . '</p>
-					</div>
-				</div>';
+
+	if ($id != 'ALL') {
+		foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid='$id'") as $row) {
+			$tempUser = $row['creatorid'];
+			foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
+				echo '<div class = "card"> 
+						<div class = "container">
+							<b>User:' . $user['nickname'] . '</b>
+							<p>User Cookie: ' . $user['cookie'] . '</p>
+							<p>Message ID: '. $row['messageid'] . '</p>
+							<p>Message: ' . $row['content'] . '</p>
+							<p>Creation Timestamp ' . $row['ts'] . '</p>
+						</div>
+					</div>';
+			}
+		}
+	}
+	else {
+		foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message") as $row) {
+			$tempUser = $row['creatorid'];
+			foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
+				echo '<div class = "card"> 
+						<div class = "container">
+							<b>User:' . $user['nickname'] . '</b>
+							<p>User Cookie: ' . $user['cookie'] . '</p>
+							<p>Message ID: '. $row['messageid'] . '</p>
+							<p>Message: ' . $row['content'] . '</p>
+							<p>Creation Timestamp ' . $row['ts'] . '</p>
+						</div>
+					</div>';
+			}
 		}
 	}
 
