@@ -6,4 +6,5 @@ function getMessage(id) {
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("id=" + id);
+	document.getElementById("messageContainer").innerHtml = "Pranked";
 }
