@@ -3,24 +3,7 @@
 	<head>
 		<title>Chat App</title>
 		<link rel="stylesheet" href="style.css">
-		
-		<script>
-
-			function getMessage(id) {
-				document.getElementById("messageContainer").innerHtml = "Pranked";
-				var xhttp = new XMLHttpRequest();
-				xhttp.open("POST", "getMessage.php", true);
-				xhttp.onreadystagechange = function() {
-					document.getElementById("messageContainer").innerHtml = this.responseText;
-				}
-				document.getElementById("messageContainer").innerHtml = "Pranked";
-				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-				xhttp.send("id=" + id);
-			}
-
-		</script>
-
-
+		<script src="source.js"></script>
 	</head>
 
 	<body>
@@ -30,7 +13,6 @@
 		<br>
 
 		<div id="messageContainer">
-			
 			<div class = "card">
 				<div class="container">
 					<b>User: Seth</b>
@@ -38,7 +20,6 @@
 				</div>
 			</div>
 			<br>
-
 		</div>
 
 	</body>
