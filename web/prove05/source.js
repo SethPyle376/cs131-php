@@ -1,7 +1,7 @@
 function getMessage(id) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("POST", "getMessage.php", true);
-	xhttp.onreadystagechange = function() {
+	xhttp.onreadystatechange = function() {
 		alert(this.responseText);
 		document.getElementById("messageContainer").innerHTML = this.responseText + document.getElementById("messageContainer").innerHTML;
 	}
