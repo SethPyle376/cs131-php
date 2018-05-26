@@ -22,8 +22,11 @@
 		return;
 	}
 
+	echo 'ID SET';
+
 	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE id='$id'") as $row) {
 		$tempUser = $row['creatorid'];
+		echo 'Row set';
 		foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
 			echo '<div class = "card"> 
 					<div class = "container">
