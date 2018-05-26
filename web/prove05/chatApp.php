@@ -3,7 +3,22 @@
 	<head>
 		<title>Chat App</title>
 		<link rel="stylesheet" href="style.css">
-		<script src="source.js"></script>
+		
+		<script>
+
+			function getMessage(id) {
+				var xhttp = new XMLHttpRequest();
+				xhttp.open("POST", "getMessage.php", true);
+				xhttp.onreadystagechange = function() {
+					document.getElementById("messageContainer").innerHtml = this.responseText;
+				}
+				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xhttp.send("id=" + id);
+			}
+
+		</script>
+
+
 	</head>
 
 	<body>
