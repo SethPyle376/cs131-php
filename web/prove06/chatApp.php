@@ -13,7 +13,7 @@
 			setMessageChecker();
 		</script>
 		<div id="top">
-			<input type="text" id="messageContent" value="" placeholder="Enter Message ID">
+			<input type="text" id="messageContent" value="" placeholder="Enter Message Here">
 			<button type="button" name="request" onClick="sendMessage()">Send Message</button>
 		</div>
 		<br>
