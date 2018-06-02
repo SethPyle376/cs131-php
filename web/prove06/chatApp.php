@@ -10,6 +10,7 @@
 		<script>
 			getNickname(getCookie("chatAppID"));
 			retrieveMessage();
+			setMessageChecker();
 		</script>
 		<div id="top">
 			<input type="text" id="messageContent" value="" placeholder="Enter Message ID">

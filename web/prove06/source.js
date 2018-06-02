@@ -64,7 +64,7 @@ function getNickname(cookie) {
 
 function setMessageChecker() {
 	window.setInterval(function(){
-		retrieveMessage.call();
+		retrieveMessage();
 	}, 2000);
 }
 
