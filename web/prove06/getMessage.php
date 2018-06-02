@@ -11,46 +11,22 @@
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	if (isset($_POST['id'])) {
-		$id = $_POST['id'];
-	}
-	else {
-		echo 'ID NOT SET';
-		return;
-	}
+	$greatest = $_POST['latestMessage'];
 
 
-	if ($id != 'ALL') {
-		foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid='$id'") as $row) {
-			$tempUser = $row['creatorid'];
-			foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
-				echo '<div class = "card"> 
-						<div class = "container">
-							<b>User:' . $user['nickname'] . '</b>
-							<p>User Cookie: ' . $user['cookie'] . '</p>
-							<p>Message ID: '. $row['messageid'] . '</p>
-							<p>Message: ' . $row['content'] . '</p>
-							<p>Creation Timestamp ' . $row['ts'] . '</p>
-						</div>
-					</div>';
+	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid > '$greatest'") as $row) {
+		$tempUser = $row['creatorid'];
+		foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
+			echo '<div class = "card"> 
+					<div class = "container">
+						<b>User:' . $user['nickname'] . '</b>
+						<p>User Cookie: ' . $user['cookie'] . '</p>
+						<p>Message ID: '. $row['messageid'] . '</p>
+						<p>Message: ' . $row['content'] . '</p>
+						<p>Creation Timestamp ' . $row['ts'] . '</p>
+					</div>
+				</div>';
 			}
 		}
-	}
-	else {
-		foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message") as $row) {
-			$tempUser = $row['creatorid'];
-			foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
-				echo '<div class = "card"> 
-						<div class = "container">
-							<b>User:' . $user['nickname'] . '</b>
-							<p>User Cookie: ' . $user['cookie'] . '</p>
-							<p>Message ID: '. $row['messageid'] . '</p>
-							<p>Message: ' . $row['content'] . '</p>
-							<p>Creation Timestamp ' . $row['ts'] . '</p>
-						</div>
-					</div>';
-			}
-		}
-	}
 
 ?>
