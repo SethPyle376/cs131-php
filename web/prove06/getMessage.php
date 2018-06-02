@@ -14,7 +14,7 @@
 	$greatest = $_POST['latestMessage'];
 
 
-	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid > '$greatest'") as $row) {
+	foreach ($db->query("SELECT messageid, creatorid, content, ts FROM message WHERE messageid > '$greatest' ORDER BY messageid DESC") as $row) {
 		$tempUser = $row['creatorid'];
 		foreach ($db->query("SELECT userid, cookie, nickname FROM chatuser WHERE userid='$tempUser'") as $user) {
 			echo '<div class = "card"> 
