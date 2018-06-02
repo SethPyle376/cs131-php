@@ -11,8 +11,8 @@
 			getNickname(getCookie("chatAppID"));
 		</script>
 		<div id="top">
-			<input type="text" id="messageID" value="" placeholder="Enter Message ID">
-			<button type="button" name="request" onClick="getMessage(document.getElementById('messageID').value)">Get Message</button>
+			<input type="text" id="messageContent" value="" placeholder="Enter Message ID">
+			<button type="button" name="request" onClick="sendMessage()">Send Message</button>
 		</div>
 		<br>
 
