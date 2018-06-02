@@ -62,9 +62,15 @@ function getNickname(cookie) {
 	xhttp.send("cookie=" + cookie);
 }
 
+/*function setMessageChecker() {
+	window.setInterval(function(){
+		retrieveMessage();
+	}, 2000);
+}*/
+
 function sendMessage() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("POST", "saveMessage.php", true);
+	xhttp.open("POST", "saveMessage.php", false);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("cookie=" + getCookie("chatAppID") + "&content=" + document.getElementById("messageContent").value);
 	retrieveMessage();
@@ -72,7 +78,7 @@ function sendMessage() {
 
 function retrieveMessage() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("POST", "getMessage.php", true);
+	xhttp.open("POST", "getMessage.php", false);
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
 			document.getElementById("messageContainer").innerHTML = this.responseText + document.getElementById("messageContainer").innerHTML;
