@@ -7,9 +7,13 @@
 	</head>
 
 	<body>
-
-		<input type="text" id="messageID" value="" placeholder="Enter Message ID">
-		<button type="button" name="request" onClick="getMessage(document.getElementById('messageID').value)">Get Message</button>
+		<script>
+			getNickname(getCookie("chatAppID"));
+		</script>
+		<div id="top">
+			<input type="text" id="messageID" value="" placeholder="Enter Message ID">
+			<button type="button" name="request" onClick="getMessage(document.getElementById('messageID').value)">Get Message</button>
+		</div>
 		<br>
 
 		<div id="messageContainer">
