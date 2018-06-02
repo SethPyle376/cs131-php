@@ -1,4 +1,4 @@
-var latestMessageID = 0;
+var latestMessage = 0;
 
 function getMessage(id) {
 	var xhttp = new XMLHttpRequest();
