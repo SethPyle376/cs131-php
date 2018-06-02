@@ -67,6 +67,7 @@ function sendMessage() {
 	xhttp.open("POST", "saveMessage.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("cookie=" + getCookie("chatAppID") + "&content=" + document.getElementById("messageContent").value);
+	retrieveMessage();
 }
 
 function retrieveMessage() {
@@ -74,7 +75,7 @@ function retrieveMessage() {
 	xhttp.open("POST", "getMessage.php", true);
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
-			document.getElementById("top").innerHTML = this.responseText+ document.getElementById("messageContent").innerHTML;
+			document.getElementById("messageContent").innerHTML = this.responseText+ document.getElementById("messageContent").innerHTML;
 		}
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
