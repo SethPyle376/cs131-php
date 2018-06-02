@@ -80,10 +80,18 @@ function retrieveMessage() {
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send("latestMessage=" + latestMessage);
-
 	updateLatest();
 }
 
 function updateLatest() {
-	latestMessage = 100;
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "getLatest.php", true);
+	xhttp.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			latestMessage = parseInt(this.responseText);
+			alert(latestMessage);
+		}
+	}
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("latestMessage=" + latestMessage);
 }
