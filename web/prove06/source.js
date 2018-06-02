@@ -53,7 +53,7 @@ function getNickname(cookie) {
 	xhttp.open("POST", "getNickname.php", true);
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
-			document.getElementById("top").innerHTML = this.responseText + document.getElementById("top").innerHTML;
+			document.getElementById("top").innerHTML = "<h1>Welcome " + this.responseText + "</h1><br>" + document.getElementById("top").innerHTML;
 		}
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
