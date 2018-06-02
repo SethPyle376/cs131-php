@@ -64,5 +64,5 @@ function sendMessage() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("POST", "getNickname.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhttp.send("cookie=" + cookie + "&content=" + document.getElementById("messageContent").value);
+	xhttp.send("cookie=" + getCookie("chatAppID") + "&content=" + document.getElementById("messageContent").value);
 }
