@@ -9,6 +9,7 @@
 	<body>
 		<script>
 			getNickname(getCookie("chatAppID"));
+			retrieveMessage();
 		</script>
 		<div id="top">
 			<input type="text" id="messageContent" value="" placeholder="Enter Message ID">
