@@ -62,11 +62,11 @@ function getNickname(cookie) {
 	xhttp.send("cookie=" + cookie);
 }
 
-/*function setMessageChecker() {
+function setMessageChecker() {
 	window.setInterval(function(){
 		retrieveMessage();
 	}, 2000);
-}*/
+}
 
 function sendMessage() {
 	var xhttp = new XMLHttpRequest();
@@ -78,7 +78,7 @@ function sendMessage() {
 
 function retrieveMessage() {
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("POST", "getMessage.php", false);
+	xhttp.open("POST", "getMessage.php", true);
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
 			document.getElementById("messageContainer").innerHTML = this.responseText + document.getElementById("messageContainer").innerHTML;
