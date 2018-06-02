@@ -64,7 +64,7 @@ function getNickname(cookie) {
 
 function setMessageChecker() {
 	window.setInterval(function(){
-		retrieveMessage();
+		retrieveMessage.call();
 	}, 2000);
 }
 
@@ -95,7 +95,6 @@ function updateLatest() {
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
 			latestMessage = parseInt(this.responseText);
-			alert(latestMessage);
 		}
 	}
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
