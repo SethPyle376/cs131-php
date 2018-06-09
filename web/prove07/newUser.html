@@ -1,0 +1,24 @@
+<html>
+
+	<head>
+		<title>Chat App</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="source.js"></script>
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			if (getCookie("chatAppID") != "") {
+				userRedirect();
+			}
+		</script>
+
+		<h1>New User</h1><br>
+		<h2>Please Enter a Username</h2><br>
+		<input type="text" id="nicknamebox"><br>
+		<button onclick="setCookie()">Continue</button>
+	</body>
+
+
+</html>
